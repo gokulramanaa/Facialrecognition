@@ -24,8 +24,8 @@ train_file="https://console.cloud.google.com/storage/browser/facedataset/"
 
 def load_dataset():
     #train_dataset = h5py.File(train_file + 'datasets/train_happy.h5', "r")
-	f = file_io.FileIO(train_file+'datasets/train_happy.h5', mode='r')
-	train_dataset = h5py.File(f)
+    f = file_io.FileIO(train_file+'datasets/train_happy.h5', mode='r')
+    train_dataset = h5py.File(f)
     train_set_x_orig = np.array(train_dataset["train_set_x"][:]) # your train set features
     train_set_y_orig = np.array(train_dataset["train_set_y"][:]) # your train set labels
 
